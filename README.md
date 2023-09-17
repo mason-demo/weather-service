@@ -91,6 +91,10 @@ Build Command
 
     sh ./script/build.sh
 
+If it fails to execute `./mvnw build` or `./mvnw test`, please try the command in project root path
+
+    mvn wrapper:wrapper
+
 ## Run Project in Docker
 After the above build, we can try run program in docker.
 Note: please stop application run by main class in ItelliJ to avoid port conflict.
@@ -103,6 +107,20 @@ Run docker compose which build/run both Redis and Weather Service
 
     docker compose up -d --build
 
+Start/Stop/Restart docker service
+
+    sh ./script/run.sh --start redis
+
+    sh ./script/run.sh --stop redis
+
+    sh ./script/run.sh --restart redis
+
+    sh ./script/run.sh --start api
+
+    sh ./script/run.sh --stop api
+
+    sh ./script/run.sh --restart api
+
 Verify API
 
 - Go to [API Test](#api-test) section
@@ -110,7 +128,7 @@ Verify API
 ## API Test
 ### Quick Test in Brower
 
-- Access the address in Browser http://localhost:8080/api/weather?apikey=api_key_1&city=London,uk
+- Access the address in Browser http://localhost:8080/api/weather?apikey=api_key_1&city=London&country=England
 - It is expected to return results like 
 
 ```
