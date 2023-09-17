@@ -1,0 +1,5 @@
+# Spring Framework Configuration
+spring:
+  redis:
+    host: localhost
+    port: 6379

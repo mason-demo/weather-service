@@ -1,0 +1,26 @@
+# Spring Framework Configuration
+spring:
+  profiles:
+    active: dev
+  jackson:
+    # The property will be serialized if its value is not null.
+    default-property-inclusion: non_null
+  jpa:
+    hibernate:
+      # JPA create table automatically when Spring Boot starts.
+      ddl-auto: update
+
+# Open Weather API configuration
+api:
+  openweather:
+    base-url: https://api.openweathermap.org
+    endpoint: /data/2.5/weather
+    api-key: 06a8aab140f3cb2e770e12385dcd2e6f
+
+# App configuration
+apikey:
+  rate:
+    max: 5
+    interval: 1 # Access limit interval in hour
+  refresh:
+    interval: 24 # Refresh interval in hour - synchronize apikey from DB to Redis every 24 hours.

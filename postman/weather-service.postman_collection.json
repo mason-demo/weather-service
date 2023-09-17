@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "1cb0d3b6-1ef9-424e-bd44-4928360cad49",
+		"name": "weather-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3779165"
+	},
+	"item": [
+		{
+			"name": "success - api_key_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", () => {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const result = pm.response.json();",
+							"",
+							"pm.test(\"Response status is success\", () => {",
+							"    pm.expect(result.status).to.equal(\"success\");",
+							"});",
+							"",
+							"pm.test(\"Response code is 200\", () => {",
+							"    pm.expect(result.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Description has value\", () => {",
+							"    pm.expect(result.data.description).to.exist;",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/weather?apikey=api_key_1&city=London&country=England",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "api_key_1"
+						},
+						{
+							"key": "city",
+							"value": "London"
+						},
+						{
+							"key": "country",
+							"value": "England"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "success - api_key_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", () => {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const result = pm.response.json();",
+							"",
+							"pm.test(\"Response status is success\", () => {",
+							"    pm.expect(result.status).to.equal(\"success\");",
+							"});",
+							"",
+							"pm.test(\"Response code is 200\", () => {",
+							"    pm.expect(result.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Description has value\", () => {",
+							"    pm.expect(result.data.description).to.exist;",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/weather?apikey=api_key_2&city=Melbourne&country=Australia",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "api_key_2"
+						},
+						{
+							"key": "city",
+							"value": "Melbourne"
+						},
+						{
+							"key": "country",
+							"value": "Australia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "success - api_key_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", () => {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const result = pm.response.json();",
+							"",
+							"pm.test(\"Response status is success\", () => {",
+							"    pm.expect(result.status).to.equal(\"success\");",
+							"});",
+							"",
+							"pm.test(\"Response code is 200\", () => {",
+							"    pm.expect(result.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Description has value\", () => {",
+							"    pm.expect(result.data.description).to.exist;",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/weather?apikey=api_key_3&city=New York&country=America",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "api_key_3"
+						},
+						{
+							"key": "city",
+							"value": "New York"
+						},
+						{
+							"key": "country",
+							"value": "America"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "success - api_key_4 - city only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", () => {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const result = pm.response.json();",
+							"",
+							"pm.test(\"Response status is success\", () => {",
+							"    pm.expect(result.status).to.equal(\"success\");",
+							"});",
+							"",
+							"pm.test(\"Response code is 200\", () => {",
+							"    pm.expect(result.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Description has value\", () => {",
+							"    pm.expect(result.data.description).to.exist;",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/weather?apikey=api_key_4&city=London",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "api_key_4"
+						},
+						{
+							"key": "city",
+							"value": "London"
+						},
+						{
+							"key": "country",
+							"value": "England",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "success - api_key_5 - country only",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", () => {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const result = pm.response.json();",
+							"",
+							"pm.test(\"Response status is success\", () => {",
+							"    pm.expect(result.status).to.equal(\"success\");",
+							"});",
+							"",
+							"pm.test(\"Response code is 200\", () => {",
+							"    pm.expect(result.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Description has value\", () => {",
+							"    pm.expect(result.data.description).to.exist;",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/weather?apikey=api_key_5&country=England",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "api_key_5"
+						},
+						{
+							"key": "city",
+							"value": "London",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "England"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fail - empty apikey",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"HTTP Status is 400\", () => {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"const result = pm.response.json();",
+							"",
+							"pm.test(\"Response status is error\", () => {",
+							"    pm.expect(result.status).to.equal(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Response code is 400\", () => {",
+							"    pm.expect(result.code).to.equal(400);",
+							"});",
+							"",
+							"pm.test(\"Error message is 'API Key is mandatory'\", () => {",
+							"    pm.expect(result.message).to.equal(\"API Key is mandatory\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/weather",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "api_key_1",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "London",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "England",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fail - invalid apikey",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"HTTP Status is 401\", () => {",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							"const result = pm.response.json();",
+							"",
+							"pm.test(\"Response status is error\", () => {",
+							"    pm.expect(result.status).to.equal(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Response code is 401\", () => {",
+							"    pm.expect(result.code).to.equal(401);",
+							"});",
+							"",
+							"pm.test(\"Error message is 'Invalid API Key'\", () => {",
+							"    pm.expect(result.message).to.equal(\"Invalid API Key\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/weather?apikey=fake_api_key",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "fake_api_key"
+						},
+						{
+							"key": "city",
+							"value": "London",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "England",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fail - empty city and country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"HTTP Status is 400\", () => {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"const result = pm.response.json();",
+							"",
+							"pm.test(\"Response status is error\", () => {",
+							"    pm.expect(result.status).to.equal(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Response code is 400\", () => {",
+							"    pm.expect(result.code).to.equal(400);",
+							"});",
+							"",
+							"pm.test(\"Error message is 'At least one of 'city' or 'country' must have a value'\", () => {",
+							"    pm.expect(result.message).to.equal(\"At least one of 'city' or 'country' must have a value\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/weather?apikey=api_key_4",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "api_key_4"
+						},
+						{
+							"key": "city",
+							"value": "London",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "England",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base-url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

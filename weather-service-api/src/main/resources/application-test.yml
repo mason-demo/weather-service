@@ -1,0 +1,5 @@
+# Spring Framework Configuration
+spring:
+  redis:
+    host: weather-service-redis
+    port: 6379
